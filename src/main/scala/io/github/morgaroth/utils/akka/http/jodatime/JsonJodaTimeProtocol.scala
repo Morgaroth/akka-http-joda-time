@@ -1,4 +1,4 @@
-package io.github.morgaroth.utils.spray.jodatime
+package io.github.morgaroth.utils.akka.http.jodatime
 
 import org.joda.time.DateTime
 import org.joda.time.format.ISODateTimeFormat

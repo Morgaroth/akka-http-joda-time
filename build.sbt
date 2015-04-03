@@ -5,7 +5,7 @@ import sbtrelease.ReleaseStateTransformations._
 import sbtrelease.ReleaseStep
 import sbtrelease.ReleasePlugin.ReleaseKeys.crossBuild
 
-name := """spray-json-joda-time"""
+name := """akka-http-joda-time"""
 
 scalacOptions ++= Seq("-feature")
 
@@ -17,6 +17,7 @@ scalaVersion := "2.11.6"
 
 libraryDependencies ++= Seq(
   "joda-time" % "joda-time" % "2.7",
+  "com.typesafe.akka" %% "akka-http-experimental" % "1.0-M5",
   "com.typesafe.akka" %% "akka-http-spray-json-experimental" % "1.0-M5"
 )
 
@@ -26,7 +27,7 @@ buildInfoKeys := Seq[BuildInfoKey](
   name, version, scalaVersion, sbtVersion, libraryDependencies, resolvers
 )
 
-buildInfoPackage := "io.github.morgaroth.utils.spray.jodatime.build"
+buildInfoPackage := "io.github.morgaroth.utils.akka.http.jodatime.build"
 
 sourceGenerators in Compile <+= buildInfo
 
