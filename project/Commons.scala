@@ -31,6 +31,6 @@ object PackagingHelpers {
       }
     }
     val transformer = new RuleTransformer(rewriteRule)
-    transformer.transform(node).head
+    transformer.transform(node).headOption.getOrElse(node)
   }
 }
